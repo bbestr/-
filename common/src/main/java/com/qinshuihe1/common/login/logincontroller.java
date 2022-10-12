@@ -15,7 +15,7 @@ public class logincontroller implements loginservice{
 
 
     @Override
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResultDto<String> login(UserVO uservo){
         ResultDto<String> resuledto = new ResultDto<>();
         resuledto.setObj("username"+uservo.getUsername()+"password"+uservo.getPassword());
@@ -23,7 +23,7 @@ public class logincontroller implements loginservice{
     }
 
     @Override
-    @GetMapping("/logout")
+    @PostMapping("/logout")
     public ResultDto<String> logout(UserVO uservo){
         ResultDto<String> resuledto = new ResultDto<>();
         return resuledto;
