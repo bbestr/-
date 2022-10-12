@@ -1,5 +1,6 @@
 package com.qinshuihe1.common.login;
 
+import com.qinshuihe1.common.logininterface.Dto.LoginResoutDto;
 import com.qinshuihe1.common.logininterface.Dto.ResultDto;
 import com.qinshuihe1.common.logininterface.UserVO;
 
@@ -16,9 +17,8 @@ public class logincontroller implements loginservice{
 
     @Override
     @PostMapping("/login")
-    public ResultDto<String> login(UserVO uservo){
-        ResultDto<String> resuledto = new ResultDto<>();
-        resuledto.setObj("username"+uservo.getUsername()+"password"+uservo.getPassword());
+    public LoginResoutDto login(UserVO uservo){
+        LoginResoutDto resuledto = new LoginResoutDto();
         return resuledto;
     }
 

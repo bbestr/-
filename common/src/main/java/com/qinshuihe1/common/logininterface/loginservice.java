@@ -1,5 +1,6 @@
 package com.qinshuihe1.common.logininterface;
 
+import com.qinshuihe1.common.logininterface.Dto.LoginResoutDto;
 import com.qinshuihe1.common.logininterface.Dto.ResultDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -8,7 +9,7 @@ import io.swagger.annotations.ApiOperation;
 public interface loginservice {
 
     @ApiOperation("/admin/login")
-    ResultDto<String> login(UserVO uservo);
+    LoginResoutDto login(UserVO uservo);
 
 
     @ApiOperation("/admin/login")
